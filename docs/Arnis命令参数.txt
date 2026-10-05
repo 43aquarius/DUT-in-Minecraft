@@ -1,0 +1,128 @@
+﻿================================================================
+  Arnis 命令参数说明 —— 本世界的生成配置与自定义指南
+================================================================
+
+【一、本世界使用的完整生成命令】
+
+  以下为生成「大连理工大学凌水校区」世界时实际使用的命令
+  (Windows 版示例，其他平台把 arnis.exe 换成对应程序名):
+
+  arnis.exe --bbox "38.87318,121.50831,38.88981,121.53206" ^
+            --output-dir "%appdata%\.minecraft\saves" ^
+            --mode geo-terrain ^
+            --scale 1 ^
+            --spawn-lat 38.8795 ^
+            --spawn-lng 121.5260 ^
+            --map-preview ^
+            --gamemode creative ^
+            --world-time 6000
+
+  Linux / macOS 版:
+
+  ./arnis --bbox "38.87318,121.50831,38.88981,121.53206" \
+          --output-dir ~/.minecraft/saves \
+          --mode geo-terrain \
+          --scale 1 \
+          --spawn-lat 38.8795 \
+          --spawn-lng 121.5260 \
+          --map-preview \
+          --gamemode creative \
+          --world-time 6000
+
+  Arnis 下载: https://github.com/louis-e/arnis/releases
+  (Windows 选 arnis-windows.exe；Linux 选 tar.gz 或
+   AppImage；macOS 选 arnis-mac-universal.tar.gz)
+
+【二、坐标说明】
+
+  --bbox "最小纬度,最小经度,最大纬度,最大经度"
+
+  本例中 38.87318,121.50831,38.88981,121.53206 是
+  OSM 上「大连理工大学(凌水校区)」多边形
+  (OSM Way 443031231, 边界范围 纬度38.8736~38.8894,
+  经度121.5089~121.5315) 向四周外扩约50米得到的范围，
+  确保校园边界上的道路、大门都完整生成。
+
+  想生成别的区域? 打开 https://www.openstreetmap.org
+  找到目标地点，地址栏或"导出"面板里能看到当前视图的
+  经纬度范围，替换 --bbox 四个数字即可。
+
+【三、常用参数速查】
+
+  --bbox <四个数字>
+        生成范围，必填(或用 --file 提供本地OSM数据)
+
+  --output-dir <路径>
+        世界输出目录，Arnis 会在其中自动创建世界文件夹
+
+  --mode <模式>
+        geo-terrain  OSM物体 + 真实高程地形 (本世界所用)
+        geo-only     OSM物体 + 平坦地面
+        terrain-only 仅真实地形，不生成任何建筑道路
+
+  --scale <比例>
+        世界比例(每米方块数)。1 = 真实大小(本世界所用)；
+        2 = 长宽都放大到2倍，适合追求建筑细节的玩家
+
+  --spawn-lat / --spawn-lng <数字>
+        出生点经纬度(需在bbox内)，本世界设在校园中心
+        (38.8795, 121.5260)
+
+  --map-preview
+        生成世界俯视预览PNG(即压缩包内的 世界俯视预览图.png)
+
+  --gamemode <模式>
+        survival / creative / spectator (默认creative)
+
+  --world-time <刻>
+        初始时间: 0=日出 6000=正午(默认) 18000=午夜
+
+  --interior true
+        生成建筑内部结构(更慢，中国区域OSM数据较稀疏，
+        效果因楼而异)
+
+  --fillground
+        填充建筑下方与地面之间的空隙
+
+  --legacy-trees
+        使用旧版程序化树木代替真实树冠数据
+
+  --disable-height-limit
+        通过自带数据包扩展建造高度(Y=-2032~2031)，
+        实验性功能，需 MC 1.21.4+
+
+  --aws-only-elevation
+        只用 AWS 30米高程数据(默认会用更高分辨率的
+        Mapterhorn 等数据源)
+
+  --bedrock
+        生成基岩版世界(.mcworld)，供手机/主机版使用
+
+  --luanti
+        生成 Luanti(原Minetest)世界
+
+  --signage <级别>
+        路牌详细程度: none / basic(默认,公共交通路牌) /
+        full(增加店名门牌)
+
+【四、性能提示】
+
+  · 2~4 km² 的校园级区域：约需 2~4 GB 内存，生成时间
+    数分钟，普通电脑即可
+  · 城市级大区域(>25 km²)：需要 8GB+ 内存，耗时显著增加
+  · 生成是全量重建，同一世界文件夹重复生成会创建新的
+    "Arnis World N"文件夹，不会覆盖旧世界
+
+【五、高级玩法】
+
+  · 想要更高还原度: 用 --scale 2 重新生成，所有建筑尺寸
+    放大一倍，细节更丰富
+  · 想连周边一起生成: 把 bbox 四个数字适当扩大，
+    例如覆盖凌水街道全域
+  · 想做服务器地图: 世界文件夹直接放入服务器的 world
+    目录即可(同样要求服务端 1.21.4+)
+
+================================================================
+  更多文档见 Arnis 官方仓库:
+  https://github.com/louis-e/arnis
+================================================================

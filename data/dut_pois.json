@@ -1,0 +1,209 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-05T02:42:47Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 347234263,
+  "lat": 38.8775252,
+  "lon": 121.5218370,
+  "tags": {
+    "amenity": "university",
+    "name": "大连理工大学（西门）Dalian University of Technology (west gate)",
+    "name:ru": "Даляньский технологический университет"
+  }
+},
+{
+  "type": "node",
+  "id": 4571085196,
+  "lat": 38.8782179,
+  "lon": 121.5229422,
+  "tags": {
+    "amenity": "university",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "大连理工大学",
+    "name:en": "Dalian University of Technology",
+    "name:zh": "大连理工大学"
+  }
+},
+{
+  "type": "node",
+  "id": 347234270,
+  "lat": 38.8777592,
+  "lon": 121.5276520,
+  "tags": {
+    "amenity": "university",
+    "name": "大连理工大学（东门）",
+    "name:ru": "Даляньский технологический университет"
+  }
+},
+{
+  "type": "node",
+  "id": 1112606183,
+  "lat": 38.8740216,
+  "lon": 121.5267951,
+  "tags": {
+    "amenity": "university",
+    "name": "大连理工大学（南门）",
+    "name:en": "Dalian University of Technology (South Gate)"
+  }
+},
+{
+  "type": "node",
+  "id": 10087321527,
+  "lat": 38.8855863,
+  "lon": 121.5198591,
+  "tags": {
+    "amenity": "bus_station",
+    "bus": "yes",
+    "name": "大连理工大学",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 10087321526,
+  "lat": 38.8858404,
+  "lon": 121.5202119,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "大连理工大学",
+    "public_transport": "platform"
+  }
+},
+{
+  "type": "node",
+  "id": 1112606180,
+  "lat": 38.8864058,
+  "lon": 121.5258248,
+  "tags": {
+    "barrier": "gate",
+    "name": "大连理工大学（北门）"
+  }
+},
+{
+  "type": "way",
+  "id": 443031231,
+  "center": {
+    "lat": 38.8814986,
+    "lon": 121.5201863
+  },
+  "tags": {
+    "addr:city": "大连市",
+    "addr:district": "甘井子区",
+    "addr:housenumber": "2号",
+    "addr:postcode": "116024",
+    "addr:province": "辽宁省",
+    "addr:street": "凌工路",
+    "amenity": "university",
+    "name": "大连理工大学(凌水校区)",
+    "name:en": "Dalian University of Technology",
+    "name:zh": "大连理工大学",
+    "website": "https://www.dlut.edu.cn"
+  }
+},
+{
+  "type": "way",
+  "id": 543818280,
+  "center": {
+    "lat": 38.8793913,
+    "lon": 121.5200755
+  },
+  "tags": {
+    "building": "hospital",
+    "name": "大连理工大学校医院"
+  }
+},
+{
+  "type": "way",
+  "id": 1381605738,
+  "center": {
+    "lat": 38.8795029,
+    "lon": 121.5252982
+  },
+  "tags": {
+    "building": "yes",
+    "museum": "history",
+    "name": "大连理工大学校史馆",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "way",
+  "id": 31305649,
+  "center": {
+    "lat": 38.8764058,
+    "lon": 121.5252786
+  },
+  "tags": {
+    "leisure": "stadium",
+    "name": "大连理工大学体育场",
+    "name:ru": "стадион Даляньского технологического университета",
+    "sport": "multi"
+  }
+},
+{
+  "type": "way",
+  "id": 1381605739,
+  "center": {
+    "lat": 38.8796782,
+    "lon": 121.5256117
+  },
+  "tags": {
+    "building": "yes",
+    "name": "大连理工大学博物馆",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "way",
+  "id": 1381605740,
+  "center": {
+    "lat": 38.8820408,
+    "lon": 121.5254000
+  },
+  "tags": {
+    "amenity": "arts_centre",
+    "building": "yes",
+    "layer": "1",
+    "name": "大连理工大学学生文化中心",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 1011392860,
+  "center": {
+    "lat": 38.8757783,
+    "lon": 121.5340633
+  },
+  "tags": {
+    "amenity": "school",
+    "name": "大连理工大学附属学校"
+  }
+},
+{
+  "type": "relation",
+  "id": 18617037,
+  "center": {
+    "lat": 39.7823444,
+    "lon": 121.8165002
+  },
+  "tags": {
+    "name": "大连理工大学",
+    "site": "university",
+    "type": "site",
+    "wikidata": "Q1477368",
+    "wikipedia": "zh:大连理工大学"
+  }
+}
+
+  ]
+}

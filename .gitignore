@@ -1,0 +1,22 @@
+# 生成产物（不入库，发布到 GitHub Releases）
+*.zip
+*.mcworld
+*.mca
+level.dat
+
+# 大文件 / 中间产物
+mc-work/
+output/
+host-libs/
+appimage/
+arnis-*.tar.gz
+arnis-*.AppImage
+*.deb
+
+# Python
+__pycache__/
+*.pyc
+
+# 系统文件
+.DS_Store
+Thumbs.db
